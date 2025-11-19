@@ -1,0 +1,16 @@
+declarar A : MATRIZ < ENTERO , 2 , 3 > = [[1,2,3],[4,5,6]];
+declarar B : MATRIZ < ENTERO , 3 , 2 > = [[7,8],[9,10],[11,12]];
+declarar C = producto(A, B);
+imprimir(C);
+
+declarar D : MATRIZ < ENTERO , 2 , 2 >;
+D = A @ B;
+imprimir(D);
+
+declarar s : FLOTANTE = 2.5;
+declarar R = s * C;
+imprimir(R);
+
+declarar X : MATRIZ < ENTERO , 2 , 2 > = [[1,2],[3,4]];
+declarar Y = X @ B;
+imprimir(Y);

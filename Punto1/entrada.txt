@@ -1,0 +1,12 @@
+CREATE TABLE clientes (id entero, nombre cadena);
+CREATE TABLE pedidos (id entero, cliente_id entero, total flotante);
+INSERT INTO clientes (id, nombre) VALUES (1, 'Ana');
+INSERT INTO clientes (id, nombre) VALUES (2, 'Luis');
+INSERT INTO pedidos (id, cliente_id, total) VALUES (1, 1, 10.5);
+INSERT INTO pedidos (id, cliente_id, total) VALUES (2, 2, 7.25);
+INSERT INTO pedidos (id, cliente_id, total) VALUES (3, 1, 12.0);
+SELECT clientes.nombre, pedidos.total FROM clientes, pedidos WHERE clientes.id = pedidos.cliente_id;
+UPDATE clientes SET nombre = 'Ana Maria' WHERE id = 1;
+SELECT nombre FROM clientes;
+DELETE FROM pedidos WHERE total < 8;
+SELECT * FROM pedidos;
